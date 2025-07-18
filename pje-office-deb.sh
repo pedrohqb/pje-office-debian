@@ -89,9 +89,8 @@ preparar_aplicacao() {
 #!/bin/bash
 # Script de inicialização do PJeOffice
 echo "Iniciando o PJeOffice!"
-# Define o PATH para o binário java específico do Zulu 11 para amd64
-export PATH="/usr/lib/jvm/zulu-11-amd64/bin"
-exec java \\
+# Define o binário java específico do Zulu 11 para amd64
+exec /usr/lib/jvm/zulu-11-amd64/bin/java \\
   -XX:+UseG1GC \\
   -XX:MinHeapFreeRatio=3 \\
   -XX:MaxHeapFreeRatio=3 \\
