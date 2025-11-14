@@ -127,6 +127,7 @@ Terminal=false
 Categories=Office;
 Comment=PJeOffice
 Icon=pjeoffice
+StartupWMClass=br-jus-cnj-pje-office-imp-PjeOfficeApp
 EOF
 
   # Criar links simbólicos
