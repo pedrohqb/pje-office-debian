@@ -5,7 +5,7 @@
 # --- Metadados do Pacote ---
 NOME_PACOTE="pje-office"
 VERSAO_PACOTE="2.5.16u"
-REVISAO_PACOTE="1"
+REVISAO_PACOTE="2"
 ARQUITETURA_PACOTE="amd64" # Para sistemas Linux de 64 bits
 DESCRICAO_PACOTE="O PJeOffice é um software disponibilizado pelo CNJ (Conselho Nacional de Justiça) para assinatura eletrônica de documentos do sistema PJe (Processo Judicial Eletrônico)."
 # Dependência para Zulu 11 e Bash. O pacote 'zulu-11' não é padrão nos repositórios do Debian/Ubuntu
