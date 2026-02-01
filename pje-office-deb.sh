@@ -89,6 +89,8 @@ preparar_aplicacao() {
 #!/bin/bash
 # Script de inicialização do PJeOffice
 echo "Iniciando o PJeOffice!"
+# Define variável de ambiente para garantir funcionamento no KDE Plasma 6 e em outros ambientes Wayland além do Gnome
+export _JAVA_AWT_WM_NONREPARENTING=1
 # Define o binário java específico do Zulu 11 para amd64
 exec /usr/lib/jvm/zulu-11-amd64/bin/java \\
   -XX:+UseG1GC \\
