@@ -35,17 +35,22 @@ O PJeOffice Pro é o assinador do CNJ usado no PJe (Processo Judicial Eletrônic
    sudo apt install ./zulu11*-linux_amd64.deb
    ```
 
-### 2. Gere o pacote do PJeOffice
+### 2. Obtenha o pacote do PJeOffice
 
-```
-git clone https://github.com/pedrohqb/pje-office-debian.git
-cd pje-office-debian
-bash pje-office-deb.sh
-```
+Há duas formas, e o resultado é o mesmo:
 
-Ao final, o arquivo `pje-office_2.5.16u-3_amd64.deb` estará na pasta atual.
+- **Baixar o pacote pronto**: na página de [Releases](https://github.com/pedrohqb/pje-office-debian/releases), baixe o `pje-office_2.5.16u-3_amd64.deb` da versão mais recente.
+- **Gerar o pacote você mesmo**, a partir do `.zip` oficial do CNJ:
+  ```
+  git clone https://github.com/pedrohqb/pje-office-debian.git
+  cd pje-office-debian
+  bash pje-office-deb.sh
+  ```
+  Ao final, o arquivo `pje-office_2.5.16u-3_amd64.deb` estará na pasta atual.
 
 ### 3. Instale o pacote
+
+Na pasta onde está o `.deb`:
 
 ```
 sudo apt install ./pje-office_2.5.16u-3_amd64.deb
@@ -66,7 +71,7 @@ Procure **PJeOffice** no menu de aplicativos ou rode `pjeoffice-pro` no terminal
 7. Gera os arquivos de controle do pacote (dependências `zulu-11` e `bash`, e um `postinst` que atualiza o menu e o cache de ícones).
 8. Monta o `.deb` com `dpkg-deb`.
 
-Nenhum arquivo do PJeOffice é hospedado neste repositório: o programa é sempre baixado do servidor do CNJ no momento da geração do pacote.
+Os arquivos do PJeOffice (inclusive o `pjeoffice-pro.jar`) entram no pacote exatamente como vêm no `.zip` do CNJ, sem nenhuma alteração. O pacote só deixa de fora o Java embutido e acrescenta o script de inicialização, o ícone e o atalho.
 
 ## Onde os arquivos ficam
 
@@ -115,4 +120,4 @@ Para ter num só lugar o PJeOffice, os drivers de token e certificado e os demai
 
 ## Licença
 
-O script está em domínio público, sob a licença [CC0-1.0](LICENSE). O PJeOffice Pro é software do CNJ e não é distribuído por este repositório.
+O script está em domínio público, sob a licença [CC0-1.0](LICENSE). O PJeOffice Pro é software do CNJ: os pacotes publicados em Releases trazem os arquivos originais do programa, sem alteração, e a licença CC0 não se aplica a eles.
