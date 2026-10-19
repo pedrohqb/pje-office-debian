@@ -27,7 +27,7 @@ NOME_DIRETORIO_EXTRAIDO="pjeoffice-pro"
 limpar_build() {
   echo "Limpando artefatos de builds anteriores..."
   rm -rf "${RAIZ_BUILD}"
-  rm -f "${NOME_PACOTE}_${VERSAO_PACOTE}-${REVISAO_PACOTE}_${ARQUITETETURA_PACOTE}.deb"
+  rm -f "${NOME_PACOTE}_${VERSAO_PACOTE}-${REVISAO_PACOTE}_${ARQUITETURA_PACOTE}.deb"
   echo "Limpeza concluída."
 }
 
